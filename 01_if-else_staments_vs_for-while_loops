@@ -1,0 +1,106 @@
+# =============================================================================
+#                       if-else Statement
+# =============================================================================
+
+    # method 01
+num = int(input('Please enter an integer: '))
+if num >=0:
+    print(num,' is a positive number ')    
+else:
+    print(num,' is a negative number ')
+
+
+    # method 02
+num = int(input('Please enter an integer: '))
+if num >=0:
+    print('%d is a positive number '%(num))      #decimal point  
+else:
+    print('%f is a negative number '%(num))   #integer
+
+
+    # elif
+num = int(input('Please enter an integer: '))
+if num >0:
+    print('%d is a positive number '%(num))      #decimal point  
+    
+elif num==0:
+    print('%d is zero '%(num))
+
+else:
+    print('%f is a negative number '%(num))   #integer
+
+#   Nested if-else
+num = int(input('Please enter an integer: '))
+if num >=0:
+        #decimal point 
+    if num==0:
+        print('zero number entered ')
+    else:
+        print('%d is a positive number '%(num))  
+       
+else:
+    print('%f is a negative number '%(num))   #integer
+
+
+# =============================================================================
+#                           Loops
+# =============================================================================
+
+
+# While
+
+count = 0
+while (count<10):
+    print('The count is : ',count)
+    count = count+1
+
+#           wrong example
+count = 0
+while count==0:
+    print('The count is : ',count)
+   
+# correct example
+# F = 9/5C +32
+c = -40
+while c<=40:
+    f = ((9./5)*c)+32.
+    print(c,f)
+    # c = c+5
+    c +=5
+
+## For
+
+for letter in 'I love Python':
+    print('The current letter is: ',letter)
+
+
+for i in 'I love Python':
+    print('The current letter is: ',i)
+
+a = ['a','b','c']
+for i in a:
+    print('Current alphabet is: ',i)
+
+#   break statemnet
+for letter in 'I love Python':
+    if letter=='P':
+        break
+    print('The current letter is: ',letter)
+
+#  using while loop
+a = 10
+while a>0:
+    print('Current value is: ',a)
+    a = a-1
+    if a==5:
+        break
+    
+#    Range function
+for num in range(10,20):
+    if num%2 ==0:
+        print('%d is an even number'%(num))
+    else:
+        print('%d is an odd number'%(num))
+            
+    
+
