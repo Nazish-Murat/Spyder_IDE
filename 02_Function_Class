@@ -1,0 +1,58 @@
+# =============================================================================
+#                   Function
+# =============================================================================
+def F(C):
+    F_value = ((9./5)*C)+32
+    print('%d degree Centigrade is equal to %d Fahrenheit'%(C,F_value))
+F(-40)     #Calling function 
+
+
+#   iterating over loop
+def F(C):
+    for i in C:
+        F_value = ((9./5)*i)+32
+
+        print('%d degree Centigrade is equal to %d Fahrenheit'%(i,F_value))
+Centi = [1,3,1,6,3,-4,-39]
+F(Centi)     #Calling function 
+
+
+# =============================================================================
+#                   Class
+# =============================================================================
+
+# class Cell:
+#     pass
+
+# cell_1 = Cell()   #instance 1
+# cell_2 = Cell()     #instance 2
+
+# print(cell_1)
+# print(cell_2)
+
+# cell_1.name = 'cell_one'
+# cell_1.x = 0
+# cell_1.y = 0
+
+# cell_2.name = 'cell_two'
+# cell_2.x = 0
+# cell_2.y = 0
+from math import sqrt
+class Cell:
+    def __init__(self,name,x,y):
+        self.name = name
+        self.x = x
+        self.y = y
+        
+    def cell_distance(self,other_cell):
+        distance = sqrt((self.x - other_cell.x)**2 + (self.y - other_cell.y)**2)
+        return distance
+cell_1 = Cell('cell_one',0,0)
+cell_2 = Cell('cell_two',10,5)
+    
+print(cell_1.name,'-->',cell_1.x)
+distance = cell_1.cell_distance(cell_2)
+print(distance)
+
+
+
