@@ -15,7 +15,13 @@ def outer_func(who):
         print(f"Hello, {who}")
     inner_func()
 outer_func("World!")
-
+  
+  #   OR
+ def outer_func():
+    def inner_func(who):
+        print(f"Hello, {who}")
+    inner_func("World!")
+outer_func() 
 
         #  Example 03  ...Find Factorial 
 def factorial(number):
