@@ -1,0 +1,55 @@
+# =============================================================================
+# Nested Functions
+# =============================================================================
+
+            # Example 01
+def outer_func():
+    def inner_func():
+        print("Hello, World!")
+    inner_func()
+outer_func()
+
+            # Example 02
+def outer_func(who):
+    def inner_func():
+        print(f"Hello, {who}")
+    inner_func()
+outer_func("World!")
+
+
+        #  Example 03  ...Find Factorial 
+def factorial(number):
+# Validate input
+    if not isinstance(number, int):
+        raise TypeError("Sorry. 'number' must be an integer.")
+        if number < 0:
+            raise ValueError("Sorry. 'number' must be zero or positive.")
+# Calculate the factorial of number
+    def inner_factorial(number):
+        if number <= 1:
+            return 1
+        return number * inner_factorial(number - 1)
+    return inner_factorial(number)
+factorial(4)
+
+            # Example 04 ...incrementing a number by 1
+def increment(number):
+    def inner_increment():
+        return number + 1
+    return inner_increment()
+increment(10)
+
+                # Example 05 ...Calculate Mean
+def mean():
+    sample = []
+    def inner_mean(number):
+        sample.append(number)
+        return sum(sample) / len(sample)
+    return inner_mean
+
+sample_mean = mean()
+sample_mean(100)
+sample_mean(105)
+sample_mean(101)
+sample_mean(98)
+
